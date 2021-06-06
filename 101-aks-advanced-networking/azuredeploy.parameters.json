@@ -8,14 +8,14 @@
         "dnsPrefix": {
             "value": "GEN-UNIQUE"
         },
+        "builtInRoleType":{
+            "value": "Contributor"
+        },
         "existingServicePrincipalObjectId": {
             "value": "GEN-AZUREAD-AKS-OBJID"
         },
         "existingServicePrincipalClientId": {
             "value": "GEN-AZUREAD-AKS-APPID"
-        },
-        "existingServicePrincipalClientSecret": {
-            "value": "GEN-AZUREAD-AKS-APPID-SECRET"
         },
         "existingVirtualNetworkName": {
             "value": "GET-PREREQ-vnetName"

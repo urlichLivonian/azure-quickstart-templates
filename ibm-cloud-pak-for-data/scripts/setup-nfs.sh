@@ -1,4 +1,5 @@
 #!/bin/sh
+yum update -y --disablerepo=* --enablerepo="*microsoft*"
 yum install -y nfs-utils
 yum install -y rpcbind
 systemctl unmask firewalld
@@ -17,4 +18,4 @@ firewall-cmd --permanent --add-service=mountd
 firewall-cmd --permanent --add-service=nfs
 firewall-cmd --permanent --add-service=rpc-bind
 firewall-cmd --reload
-echo "\$(sudo blkid | grep /dev/sdc | awk '{print \$2}') /exports/home        xfs     defaults    0 0" >> /etc/fstab
+echo "$(sudo blkid | grep /dev/sdc | awk '{print $2}') /exports/home        xfs     defaults    0 0" >> /etc/fstab
